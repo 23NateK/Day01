@@ -52,7 +52,36 @@ for(int n=0;n<nums.length;n++){
 
 return ans;
 }
+public static boolean haveThree(int[] nums) {
+  boolean bool=false;
+  int count=0;
+  for(int n=0;n<nums.length;n++){
+    if(nums[n]==3){
+        count++;
+        n++;
+    }
+  }
+  if(count==3){
+    bool=true;
+  }
+  return bool;
+
+}
+public static boolean tripleUp(int[] nums) {
+  boolean bool=false;
+  if(nums.length<3){
+    return bool;
+  }else{
+    for(int n=0;n+2<nums.length;n++){
+        if(nums[n+1]==nums[n]+1&&nums[n+1]==nums[n]+2){
+            bool=true;
+        }
+    }
+  }
+  return bool;
+}
 
     public static void main(String[] args) {
+        
     }
 }
